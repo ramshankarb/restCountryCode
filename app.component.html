@@ -1,0 +1,27 @@
+<!-- Nav bar -->
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm " style="background: linear-gradient(to right,green, black);">
+    <div class="container-fluid">
+      <!--container of navbar-->
+      <h2 class="navbar-brand m-0 p-0">
+        <a class="nav-item nav-link text-white text-center" [routerLink]="['/regions']">REST COUNTRIES</a>
+      </h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglernav" aria-controls="myTogglernav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--for collapsing-->
+      <!--collapse-->
+    </div>
+    <!--container-->
+  </nav>
+  <div class="card-group mt-2">
+  <div class="card m-2 mt-1" *ngFor="let region of regionsArray">
+      <!--Card image-->
+      <!--Card content-->
+      <div class="card-body text-center bg-light">
+        <a [routerLink]="['/allcountries',region]" class="btn btn-success btn-sm">{{region}}</a>
+      </div>
+    </div>
+  </div>
+  <!--nav-->
+<router-outlet></router-outlet>
